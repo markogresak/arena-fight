@@ -1,0 +1,37 @@
+{
+    "version": "1.5.0-beta",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "isolatedModules": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "outDir": "bin"
+    },
+    "filesGlob": [
+        "./**/*.ts",
+        "!./node_modules/**/*"
+    ],
+    "files": [
+        "./public/bower/phaser/typescript/p2.d.ts",
+        "./public/bower/phaser/typescript/phaser.comments.d.ts",
+        "./public/bower/phaser/typescript/pixi.comments.d.ts",
+        "./src/game/main.ts",
+        "./src/game/states/boot.ts",
+        "./src/game/states/gameover.ts",
+        "./src/game/states/main-menu.ts",
+        "./src/game/states/play.ts",
+        "./src/game/states/preloader.ts",
+        "./test/test.ts",
+        "./typings/chai/chai.d.ts",
+        "./typings/lodash/lodash.d.ts",
+        "./typings/mocha/mocha.d.ts",
+        "./typings/tsd.d.ts"
+    ]
+}

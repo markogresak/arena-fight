@@ -1,0 +1,12 @@
+{
+  "name": "arena-fight",
+  "version": "0.0.0",
+  "homepage": "https://github.com/markogresak/arena-fight",
+  "authors": [
+    "Marko Grešak <marko@gresak.io>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "phaser": "~2.4.2"
+  }
+}

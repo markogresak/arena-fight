@@ -1,0 +1,48 @@
+{
+  "name": "arena-fight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install && rm -f public/bower/phaser/typescript/phaser.d.ts public/bower/phaser/typescript/pixi.d.ts",
+    "build:wiredep": "./node_modules/.bin/wiredep -s public/index.html",
+    "build:dev": "./node_modules/.bin/webpack-dev-server --progress --colors --watch --hot --content-base public",
+    "build:deploy": "npm run build:wiredep && ./node_modules/.bin/webpack --bail",
+    "start": "npm run build:wiredep && npm run build:dev",
+    "test": "./node_modules/.bin/mocha --compilers ts:typescript-node/register -r chai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markogresak/arena-fight.git"
+  },
+  "keywords": [],
+  "author": "Marko Gresak <marko@gresak.io> (http://gresak.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markogresak/arena-fight/issues"
+  },
+  "homepage": "https://github.com/markogresak/arena-fight#readme",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "bower": "^1.4.1",
+    "chai": "^3.2.0",
+    "css-loader": "^0.15.6",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "mocha": "^2.2.5",
+    "node-sass": "^3.2.0",
+    "postcss-loader": "^0.5.1",
+    "sass-loader": "^1.0.4",
+    "style-loader": "^0.12.3",
+    "ts-loader": "^0.5.0",
+    "tsd": "^0.6.3",
+    "typescript": "^1.5.3",
+    "typescript-node": "0.0.7",
+    "webpack": "^1.10.5",
+    "webpack-dev-server": "^1.10.1",
+    "wiredep": "^2.2.2"
+  }
+}
